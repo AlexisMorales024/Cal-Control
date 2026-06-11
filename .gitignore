@@ -1,15 +1,84 @@
+# ============================================================
+#  .gitignore para proyecto Android con Kotlin
+# ============================================================
+
+# ── Gradle ──────────────────────────────────────────────────
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# ── Outputs de compilación ──────────────────────────────────
+/build/
+app/build/
+**/build/
+
+# ── Archivos locales de Android Studio / IntelliJ ───────────
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
+/.idea/caches/
+/.idea/libraries/
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+/.idea/.name
+/.idea/compiler.xml
+/.idea/migrations.xml
+# Mantener estos (útiles para el equipo):
+# !/.idea/codeStyles/
+# !/.idea/inspectionProfiles/
+# !/.idea/runConfigurations/
+
+# ── Propiedades locales ─────────────────────────────────────
+local.properties          # Ruta del SDK — única por máquina
+
+# ── Keystores y firmas (¡NUNCA subir al repo!) ──────────────
+*.jks
+*.keystore
+release-keystore.properties
+signing.properties
+keystore.properties
+
+# ── Archivos de sistema operativo ───────────────────────────
+.DS_Store                 # macOS
+Thumbs.db                 # Windows
+desktop.ini               # Windows
+ehthumbs.db               # Windows
+
+# ── NDK / C++ nativo ────────────────────────────────────────
+.externalNativeBuild/
+.cxx/
+
+# ── Capturas de Android Studio ──────────────────────────────
+/captures/
+
+# ── Lint ────────────────────────────────────────────────────
+lint/intermediates/
+lint/logs/
+lint/outputs/
+lint/tmp/
+
+# ── Kotlin específico ────────────────────────────────────────
+*.kotlin_module
+
+# ── Archivos de cobertura de tests ──────────────────────────
+*.exec
+*.ec
+/jacoco/
+
+# ── Secrets y variables de entorno ──────────────────────────
+secrets.properties
+.env
+.env.local
+google-services.json      # ⚠️  Mover a gitignore si contiene API keys sensibles
+                          #     (a veces se sube intencionalmente para CI/CD)
+
+# ── Firebase / Google ────────────────────────────────────────
+# google-services.json    # Descomentar si tiene datos sensibles
+# GoogleService-Info.plist
+
+# ── Profiler de Android Studio ──────────────────────────────
+*.hprof
+
+# ── Archivos generados por plugins ──────────────────────────
+generated/
