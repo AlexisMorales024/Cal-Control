@@ -200,15 +200,9 @@ Presiona el botón ▶️ **Run** en Android Studio, o ejecuta desde la terminal
 
 ## 📸 Capturas de Pantalla
 
-### Prototipo en Figma
+## Prototipo de Figma
 
-> 🔜 *Capturas del prototipo de Figma se agregarán próximamente.*
-
-<!--
-| Pantalla Principal | Búsqueda de Alimentos | Historial |
-|---|---|---|
-| ![Figma Home](ruta/figma_home.png) | ![Figma Search](ruta/figma_search.png) | ![Figma History](ruta/figma_history.png) |
--->
+![Prototipo de Figma](prototipo-figma.png)
 
 ---
 
