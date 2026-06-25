@@ -234,8 +234,18 @@ Presiona el botón ▶️ **Run** en Android Studio, o ejecuta desde la terminal
 | Base de datos local con Room | 🔄 En progreso |
 | Estadísticas avanzadas | 🔜 Planificada |
 | Configuración de metas personalizadas | 🔜 Planificada |
-
+### Login funcionando
+![Login funcionando](login.png)
 ---
+## 🚀 Funcionalidades implementadas
+
+- 🔐 Login de usuarios con validación de correo y contraseña  
+- 📝 Registro de usuarios con almacenamiento en base de datos local (Room)  
+- ✔ Validaciones en formularios (campos vacíos, formato de correo y contraseña mínima)  
+- 🔄 Navegación entre pantallas (Login → Registro → Home)  
+- 💾 Persistencia de usuarios en base de datos local  
+- 🎨 Interfaz con Material Design y paleta de colores personalizada
+
 
 ## 👨‍💻 Autor
 
@@ -246,14 +256,7 @@ Presiona el botón ▶️ **Run** en Android Studio, o ejecuta desde la terminal
 [![GitHub](https://img.shields.io/badge/GitHub-AlexisMorales024-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AlexisMorales024)
 
 *Desarrollador Android — Proyecto CalControl*
-## 🚀 Funcionalidades implementadas
 
-- 🔐 Login de usuarios con validación de correo y contraseña  
-- 📝 Registro de usuarios con almacenamiento en base de datos local (Room)  
-- ✔ Validaciones en formularios (campos vacíos, formato de correo y contraseña mínima)  
-- 🔄 Navegación entre pantallas (Login → Registro → Home)  
-- 💾 Persistencia de usuarios en base de datos local  
-- 🎨 Interfaz con Material Design y paleta de colores personalizada  
 </div>
 
 ---
