@@ -234,8 +234,7 @@ Presiona el botón ▶️ **Run** en Android Studio, o ejecuta desde la terminal
 | Base de datos local con Room | 🔄 En progreso |
 | Estadísticas avanzadas | 🔜 Planificada |
 | Configuración de metas personalizadas | 🔜 Planificada |
-### Login funcionando
-![Login funcionando](login.png)
+
 ---
 ## 🚀 Funcionalidades implementadas
 
@@ -245,7 +244,8 @@ Presiona el botón ▶️ **Run** en Android Studio, o ejecuta desde la terminal
 - 🔄 Navegación entre pantallas (Login → Registro → Home)  
 - 💾 Persistencia de usuarios en base de datos local  
 - 🎨 Interfaz con Material Design y paleta de colores personalizada
-
+### Login funcionando
+![Login funcionando](login.png)
 
 ## 👨‍💻 Autor
 
