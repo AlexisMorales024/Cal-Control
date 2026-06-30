@@ -1,4 +1,4 @@
-package com.morales.calcontrol
+package com.morales.calcontrol.login
 
 import androidx.room.Dao
 import androidx.room.Insert

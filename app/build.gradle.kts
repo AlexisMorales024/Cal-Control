@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -26,38 +27,37 @@ android {
     }
 
     buildFeatures {
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.14"
+        viewBinding = true
     }
 }
 
 dependencies {
 
-    // Core
+    // Core Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
-    // Room
+    // RecyclerView (IMPORTANTE PARA TU CRUD)
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    // Room (BASE DE DATOS)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
 
-    // Coroutines
+    // Coroutines (para Room + ViewModel)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    // Compose
-    implementation(platform("androidx.compose:compose-bom:2024.10.00"))
+    // Lifecycle (ViewModel + LiveData)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.4")
 
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.3")
-    debugImplementation("androidx.compose.ui:ui-tooling")
+    // Activity KTX (viewModels())
+    implementation("androidx.activity:activity-ktx:1.9.0")
+
+    // WorkManager
+    implementation("androidx.work:work-runtime-ktx:2.9.1")
 }
 
 kotlin {

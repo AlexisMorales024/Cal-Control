@@ -1,4 +1,4 @@
-package com.morales.calcontrol
+package com.morales.calcontrol.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,11 @@ import androidx.lifecycle.lifecycleScope
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import com.morales.calcontrol.EntradaAlimentoActivity
+import com.morales.calcontrol.MainActivity
 import kotlinx.coroutines.launch
+import com.morales.calcontrol.R
+import kotlin.jvm.java
 
 class LoginActivity : AppCompatActivity() {
 
@@ -68,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
 
                 Toast.makeText(this@LoginActivity, "Login exitoso", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                val intent = Intent(this@LoginActivity, EntradaAlimentoActivity::class.java)
 
                 intent.flags =
                     Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

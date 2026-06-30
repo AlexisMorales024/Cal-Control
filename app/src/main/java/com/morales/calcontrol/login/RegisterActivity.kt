@@ -1,4 +1,4 @@
-package com.morales.calcontrol
+package com.morales.calcontrol.login
 
 import android.os.Bundle
 import android.widget.Button
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import com.morales.calcontrol.R
 import kotlinx.coroutines.launch
 
 class RegisterActivity : AppCompatActivity() {

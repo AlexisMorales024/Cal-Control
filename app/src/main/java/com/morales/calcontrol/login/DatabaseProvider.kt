@@ -1,21 +1,23 @@
-package com.morales.calcontrol
+package com.morales.calcontrol.login
 
 import android.content.Context
 import androidx.room.Room
 
 object DatabaseProvider {
 
+    @Volatile
     private var INSTANCE: AppDatabase? = null
 
     fun getDatabase(context: Context): AppDatabase {
 
         return INSTANCE ?: synchronized(this) {
-
             val instance = Room.databaseBuilder(
                 context.applicationContext,
                 AppDatabase::class.java,
                 "calcontrol_db"
-            ).build()
+            )
+                .fallbackToDestructiveMigration() // 👈 AQUÍ
+                .build()
 
             INSTANCE = instance
             instance

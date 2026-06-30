@@ -1,7 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
+        android:name=".CalControlApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalControl">
 
-        <!-- LOGIN ES LA PRIMERA PANTALLA -->
+        <!-- ENTRADA ALIMENTO ES LA PRIMERA PANTALLA -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".EntradaAlimentoActivity"
             android:exported="true">
 
             <intent-filter>
@@ -23,14 +26,14 @@
 
         </activity>
 
-        <!-- MAIN (pantalla de bienvenida) -->
+        <!-- LOGIN -->
         <activity
-            android:name=".MainActivity"
+            android:name=".login.LoginActivity"
             android:exported="false" />
 
         <!-- REGISTER -->
         <activity
-            android:name=".RegisterActivity"
+            android:name=".login.RegisterActivity"
             android:exported="false" />
 
     </application>

@@ -1,11 +1,11 @@
-package com.morales.calcontrol
+package com.morales.calcontrol.login
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 
 @Database(
     entities = [Usuario::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
