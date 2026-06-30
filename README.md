@@ -246,7 +246,118 @@ Presiona el botón ▶️ **Run** en Android Studio, o ejecuta desde la terminal
 - 🎨 Interfaz con Material Design y paleta de colores personalizada
 ### Login funcionando
 ![Login funcionando](login.png)
+## 🔔 Notificaciones locales
 
+La aplicación CalControl implementa notificaciones locales utilizando WorkManager para mejorar el hábito de registro del usuario.
+
+Las notificaciones se activan en los siguientes casos:
+
+- 🕗 Recordatorio diario si el usuario no ha registrado alimentos durante el día.
+- ⚠️ Alerta cuando se supera la meta diaria de calorías.
+- 📊 Resumen diario del consumo de calorías.
+
+Estas notificaciones se ejecutan en segundo plano mediante WorkManager, lo que permite que se mantengan activas incluso si la aplicación está cerrada.
+
+Además, se utiliza NotificationChannel para compatibilidad con Android 8+ y el permiso POST_NOTIFICATIONS en Android 13+.
+
+🏗️ Arquitectura
+
+La aplicación sigue el patrón MVVM:
+
+View → ViewModel → Repository → Room Database
+
+View (UI): Activities y RecyclerView
+ViewModel: Manejo de lógica de UI
+Repository: Intermediario entre ViewModel y Room
+Room: Base de datos local para almacenar los alimentos
+
+🚀 Cómo probar las funciones de la app
+
+Si quieres comprobar que todo funciona correctamente (CRUD y notificaciones), sigue estos pasos:
+
+1. ➕ Añadir alimentos
+
+Pulsa el botón “+” en la parte inferior derecha.
+Registra un alimento, por ejemplo “Desayuno” con aproximadamente 500 kcal.
+Al guardarlo, el registro debe aparecer inmediatamente en la lista.
+
+2. ✏️ Editar alimentos
+
+Haz clic en cualquier alimento de la lista.
+Modifica el nombre o las calorías y guarda los cambios.
+Verifica que la información se actualice correctamente en la pantalla principal.
+
+3. 🗑️ Eliminar alimentos
+
+Mantén presionado un registro durante un segundo.
+Aparecerá una opción para eliminarlo.
+Al eliminarlo, se mostrará un mensaje de confirmación con la opción “Deshacer”, que permite restaurar el elemento si se selecciona rápidamente.
+
+4. 🔔 Probar notificaciones
+⚠️ Alerta de meta calórica: registra un alimento con más de 2000 kcal y verifica que se muestre una notificación de advertencia.
+📊 Resumen / recordatorio diario: el sistema está configurado para ejecutarse en un intervalo corto (10 segundos) con fines de prueba.
+Si no hay registros, se mostrará una notificación recordando al usuario que registre alimentos.
+Si existen registros, se mostrará un resumen con el total de calorías consumidas.
+
+# 📸 Capturas de la aplicación
+
+A continuación se muestran las principales pantallas y funcionalidades implementadas en la aplicación.
+
+---
+
+## 🏠 1. Pantalla principal
+Pantalla de inicio donde el usuario puede visualizar el resumen de la aplicación y acceder a las diferentes opciones.
+
+<p align="center">
+  <img src="home.png" alt="Pantalla principal" width="300">
+</p>
+
+---
+
+## ➕ 2. Agregar alimento
+Formulario utilizado para registrar un nuevo alimento con su información nutricional.
+
+<p align="center">
+  <img src="formulario.png" alt="Formulario de agregar alimento" width="300">
+</p>
+
+---
+
+## 📋 3. Lista de alimentos
+Pantalla que muestra todos los alimentos registrados mediante un **RecyclerView** o una **LazyColumn de Jetpack Compose**.
+
+<p align="center">
+  <img src="lista.png" alt="Lista de alimentos" width="300">
+</p>
+
+---
+
+## ✏️ 4. Editar alimento
+Permite modificar la información de un alimento previamente registrado.
+
+<p align="center">
+  <img src="edicion.png" alt="Editar alimento" width="300">
+</p>
+
+---
+
+## 🗑️ 5. Eliminar alimento
+Confirmación y eliminación de un alimento almacenado en la base de datos.
+
+<p align="center">
+  <img src="eliminar.png" alt="Eliminar alimento" width="300">
+</p>
+
+---
+
+## 🔔 6. Notificaciones
+La aplicación genera notificaciones para recordar al usuario registrar o revisar su alimentación.
+
+<p align="center">
+  <img src="notificacion1.png" alt="Notificación 1" width="280">
+  <img src="notificacion2.png" alt="Notificación 2" width="280">
+  <img src="notificacion3.png" alt="Notificación 3" width="280">
+</p>
 ## 👨‍💻 Autor
 
 <div align="center">
