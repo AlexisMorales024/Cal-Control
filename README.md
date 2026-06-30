@@ -299,21 +299,65 @@ Al eliminarlo, se mostrará un mensaje de confirmación con la opción “Deshac
 Si no hay registros, se mostrará una notificación recordando al usuario que registre alimentos.
 Si existen registros, se mostrará un resumen con el total de calorías consumidas.
 
-📸 Capturas de la aplicación
-1. 🏠 Pantalla principal (Home)
-   ![Pantalla principal](home.png)
-2. ➕ Formulario de agregar alimento
-![Formulario de agregar alimento](formulario.png)
-3. 📋 Lista de alimentos (RecyclerView / Compose list)
-   ![Lista de alimentos](lista.png)
-4. ✏️ Pantalla de edición
-    ![edicion](edicion.png)
-5. 🗑️ Eliminación de alimento
-   ![edicion](eliminar.png)
-6. 🔔 Notificación funcionando
-![notificacion](notificacion1.png)
-![notificacion](notificacion2.png)
-![notificacion](notificacion3.png)
+# 📸 Capturas de la aplicación
+
+A continuación se muestran las principales pantallas y funcionalidades implementadas en la aplicación.
+
+---
+
+## 🏠 1. Pantalla principal
+Pantalla de inicio donde el usuario puede visualizar el resumen de la aplicación y acceder a las diferentes opciones.
+
+<p align="center">
+  <img src="home.png" alt="Pantalla principal" width="300">
+</p>
+
+---
+
+## ➕ 2. Agregar alimento
+Formulario utilizado para registrar un nuevo alimento con su información nutricional.
+
+<p align="center">
+  <img src="formulario.png" alt="Formulario de agregar alimento" width="300">
+</p>
+
+---
+
+## 📋 3. Lista de alimentos
+Pantalla que muestra todos los alimentos registrados mediante un **RecyclerView** o una **LazyColumn de Jetpack Compose**.
+
+<p align="center">
+  <img src="lista.png" alt="Lista de alimentos" width="300">
+</p>
+
+---
+
+## ✏️ 4. Editar alimento
+Permite modificar la información de un alimento previamente registrado.
+
+<p align="center">
+  <img src="edicion.png" alt="Editar alimento" width="300">
+</p>
+
+---
+
+## 🗑️ 5. Eliminar alimento
+Confirmación y eliminación de un alimento almacenado en la base de datos.
+
+<p align="center">
+  <img src="eliminar.png" alt="Eliminar alimento" width="300">
+</p>
+
+---
+
+## 🔔 6. Notificaciones
+La aplicación genera notificaciones para recordar al usuario registrar o revisar su alimentación.
+
+<p align="center">
+  <img src="notificacion1.png" alt="Notificación 1" width="280">
+  <img src="notificacion2.png" alt="Notificación 2" width="280">
+  <img src="notificacion3.png" alt="Notificación 3" width="280">
+</p>
 ## 👨‍💻 Autor
 
 <div align="center">
